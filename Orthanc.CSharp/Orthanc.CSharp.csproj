@@ -45,8 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Log.cs" />
+    <Compile Include="PluginsCore\Enums\OrthancPluginContentType.cs" />
+    <Compile Include="PluginsCore\Enums\OrthancPluginDicomToJsonFlags.cs" />
+    <Compile Include="PluginsCore\Enums\OrthancPluginDicomToJsonFormat.cs" />
     <Compile Include="PluginsCore\Enums\OrthancPluginErrorCode.cs" />
     <Compile Include="PluginsCore\Enums\OrthancPluginHttpMethod.cs" />
+    <Compile Include="PluginsCore\Enums\OrthancPluginResourceType.cs" />
     <Compile Include="PluginsCore\Enums\OrthancPluginValueRepresentation.cs" />
     <Compile Include="PluginsCore\Enums\_OrthancPluginProperty.cs" />
     <Compile Include="PluginsCore\Enums\_OrthancPluginService.cs" />
@@ -56,8 +60,16 @@
     <Compile Include="PluginsCore\Structs\OrthancPluginDictionaryEntry.cs" />
     <Compile Include="PluginsCore\Structs\OrthancPluginHttpRequest.cs" />
     <Compile Include="PluginsCore\Structs\OrthancPluginMemoryBuffer.cs" />
+    <Compile Include="PluginsCore\Structs\_OrthancPluginAnswerBuffer.cs" />
+    <Compile Include="PluginsCore\Structs\_OrthancPluginDicomToJson.cs" />
+    <Compile Include="PluginsCore\Structs\_OrthancPluginReconstructMainDicomTags.cs" />
+    <Compile Include="PluginsCore\Structs\_OrthancPluginRegisterDictionaryTag.cs" />
+    <Compile Include="PluginsCore\Structs\_OrthancPluginRegisterErrorCode.cs" />
+    <Compile Include="PluginsCore\Structs\_OrthancPluginRestApiGet2.cs" />
     <Compile Include="PluginsCore\Structs\_OrthancPluginRestCallback.cs" />
     <Compile Include="PluginsCore\Structs\_OrthancPluginSetPluginProperty.cs" />
+    <Compile Include="PluginsCore\Structs\_OrthancPluginStorageAreaRead.cs" />
+    <Compile Include="PluginsCore\Structs\_OrthancPluginStorageAreaRemove.cs" />
     <Compile Include="PluginsCore\Structs\_OrthancPluginWorklistAnswersOperation.cs" />
     <Compile Include="PluginsCore\Structs\_OrthancPluginWorklistCallback.cs" />
     <Compile Include="PluginsCore\Structs\_OrthancPluginWorklistQueryOperation.cs" />

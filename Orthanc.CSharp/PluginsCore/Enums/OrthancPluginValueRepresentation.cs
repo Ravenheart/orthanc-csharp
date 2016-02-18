@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Orthanc.CSharp.PluginsCore.Enums
 {
+    /// <summary>
+    /// The value representations present in the DICOM standard (version 2013).
+    /// </summary>
     public enum OrthancPluginValueRepresentation
     {
         OrthancPluginValueRepresentation_AE = 1,   /*!< Application Entity */
