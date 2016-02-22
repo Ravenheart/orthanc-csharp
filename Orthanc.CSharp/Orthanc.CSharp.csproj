@@ -62,6 +62,7 @@
     <Compile Include="PluginsCore\Structs\OrthancPluginMemoryBuffer.cs" />
     <Compile Include="PluginsCore\Structs\_OrthancPluginAnswerBuffer.cs" />
     <Compile Include="PluginsCore\Structs\_OrthancPluginDicomToJson.cs" />
+    <Compile Include="PluginsCore\Structs\_OrthancPluginOnStoredInstanceCallback.cs" />
     <Compile Include="PluginsCore\Structs\_OrthancPluginReconstructMainDicomTags.cs" />
     <Compile Include="PluginsCore\Structs\_OrthancPluginRegisterDictionaryTag.cs" />
     <Compile Include="PluginsCore\Structs\_OrthancPluginRegisterErrorCode.cs" />

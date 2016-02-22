@@ -202,6 +202,38 @@ namespace Orthanc.CSharp.PluginsCore
         }
 
         /// <summary>
+        /// Register a callback for received instances.
+        /// This function registers a callback function that is called
+        /// whenever a new DICOM instance is stored into the Orthanc core.
+        /// </summary>
+        /// <param name="context">OrthancPluginContext* - The Orthanc plugin context, as received by OrthancPluginInitialize().</param>
+        /// <param name="callback">OrthancPluginOnStoredInstanceCallback - The callback function.</param>
+        public static void OrthancPluginRegisterOnStoredInstanceCallback(ref OrthancPluginContext context, Orthanc.CSharp.PluginsCore.Callbacks.OrthancPluginOnStoredInstanceCallback callback)
+        {
+            IntPtr ptr = IntPtr.Zero;
+            try
+            {
+                _OrthancPluginOnStoredInstanceCallback pr = new _OrthancPluginOnStoredInstanceCallback();
+                pr.callback = callback;
+
+                int size = Marshal.SizeOf(pr);
+                ptr = Marshal.AllocHGlobal(size);
+                Marshal.StructureToPtr(pr, ptr, true);
+
+                context.InvokeService(ref context, _OrthancPluginService._OrthancPluginService_RegisterOnStoredInstanceCallback, ptr);
+            }
+            catch (Exception ex)
+            {
+                Log.Message(ex.ToString());
+                OrthancPluginLogError(ref context, ex.ToString());
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(ptr);
+            }
+        }
+
+        /// <summary>
         /// Retrieve the worklist query as a DICOM file.
         /// </summary>
         /// <param name="context">OrthancPluginContext* </param>
